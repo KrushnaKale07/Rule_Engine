@@ -1,16 +1,6 @@
 package com.rule.engine.model;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Table(name = "rule_engine_db")
 public class ASTNode {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
 
 	private String type;
 	private ASTNode left;
@@ -26,12 +16,8 @@ public class ASTNode {
 		this.value = value;
 	}
 
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
+	public ASTNode(String string, String string2, ASTNode combined, ASTNode newRule) {
+		super();
 	}
 
 	public String getType() {
